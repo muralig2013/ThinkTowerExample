@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/messageScript.js"></script>
+  <style>
+   .result{
+       position: fixed;
+       top: 10px;
+       left: 40%;
+       width: 20%;
+       text-align: center;
+       z-index: 2000;
+   }
+   .result-danger{
+       position: fixed;
+       top: 10px;
+       left: 60%;
+       width: 20%;
+       text-align: center;
+       z-index: 2000;
+   }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="alert alert-success result" style="display:none;"></div>
+  <div class="alert alert-danger result-danger" style="display:none;"></div>
+  <br><br>
+  <h2>Messaging Service</h2>
+  <form id="messageForm">
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <input type="text" class="form-control message" required>
+    </div>
+    <button type="submit" class="btn btn-success save-message">Post My Message</button>
+  </form>
+  <br>
+  <button class="btn btn-info get-message">Get My Messages</button>
+  <button class="btn btn-warning hide-message">Hide My Messages</button>
+  <br><br>
+  <div id="messageContainer"></div>
+</div>
+<br>
+</body>
+</html>
